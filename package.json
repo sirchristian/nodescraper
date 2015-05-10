@@ -1,0 +1,23 @@
+{
+  "name": "nodescraper",
+  "version": "0.0.1",
+  "description": "A node.js web api that will take commands and do basic scraping of a website",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sirchristian/nodescraper.git"
+  },
+  "author": "sirchristian",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/sirchristian/nodescraper/issues"
+  },
+  "homepage": "https://github.com/sirchristian/nodescraper",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script src="/js/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<h3>Usage</h3>
+		<ul>
+			<li><strong>POST</strong>: /scrape <br/>
+				<pre>{ "args": { :"url" : 'http://url' } }</pre>
+			</li>
+		</ul>
+		<hr>
+		<h4>Test</h4>
+		<form method="POST" action="/scrape">
+			<textarea name="json" rows="20" cols="120">{ "args": { "url" : "http://www.google.com" } }</textarea>
+			<br />
+			<input type="submit" value="Test" />
+		</form>
+		<script>
+$(function() {
+	$('form').submit(function() {
+		$.ajax({
+			method: "POST",
+			contentType: "application/json; charset=utf-8",
+			dataType : "json",
+			url: "/scrape",
+			data: $('textarea').val()
+		})
+		.done(function(msg) {
+    			alert( "Message : " + msg );
+  		});
+		return false;
+	});
+});
+		</script>
+	</body>
+</html>
+
